@@ -53,12 +53,12 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#ust" aria-label="Kripto Uyum Pusulası ana sayfa">
+        <a className="brand" href="/" aria-label="Kripto Uyum Pusulası ana sayfa">
           <span className="brand-mark" aria-hidden="true"><i /></span>
           <span>Kripto Uyum<br /><b>Pusulası</b></span>
         </a>
         <nav aria-label="Ana menü">
-          <a href="#mevzuat">Mevzuat</a>
+          <a href="/mevzuat">Mevzuat</a>
           <a href="#yol-haritasi">Yol haritası</a>
           <a href="#blog">Blog</a>
           <a href="#iletisim">İletişim</a>
@@ -77,7 +77,7 @@ export default function Home() {
             güncel düzenlemeleri, operasyonel yükümlülükleri ve uygulama notlarını tek yerde izleyin.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#mevzuat">Uyum başlıklarını incele <span>↓</span></a>
+            <a className="button primary" href="/mevzuat">Mevzuatı incele <span>→</span></a>
             <a className="text-link" href="#blog">Son yazıları oku <span>→</span></a>
           </div>
         </div>
@@ -179,6 +179,7 @@ export default function Home() {
               </ul>
               <p>Çıktı yalnızca çalışan bir cüzdan değildir. Kim-ne zaman-ne yaptı sorularını yanıtlayan tören tutanağı, anahtar envanteri, yetki matrisi, yapılandırma özetleri ve test sonuçlarından oluşan bir <b>kanıt paketi</b> üretilmelidir. Böylece operasyon, denetim ve olay müdahalesi aynı güven temelinde buluşur.</p>
             </div>
+            <a className="read-more" href="/blog/saklamada-ilklendirme">Devamını oku <span>→</span></a>
           </div>
         </article>
 
@@ -206,6 +207,7 @@ export default function Home() {
               </ul>
               <p>Piyasa yapıcılığı fiyatın yükselmesini garanti etmez; amaç düzenli bir alım-satım ortamını desteklemektir. Platform ile piyasa yapıcı arasındaki sözleşme, teşvikler, raporlama, olağanüstü piyasa koşulları ve fesih kuralları açık olmalıdır. Listeleme, gözetim ve çıkar çatışması kontrolleri organizasyon içinde birbirinden ayrıştırılmalıdır.</p>
             </div>
+            <a className="read-more" href="/blog/piyasa-yapici">Devamını oku <span>→</span></a>
           </div>
         </article>
       </section>
@@ -236,13 +238,13 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#ust">
+        <a className="brand footer-brand" href="/">
           <span className="brand-mark" aria-hidden="true"><i /></span>
           <span>Kripto Uyum<br /><b>Pusulası</b></span>
         </a>
         <p>Türkiye kripto ekosistemi için bağımsız bilgilendirme platformu.</p>
         <div>
-          <a href="#mevzuat">Mevzuat</a>
+          <a href="/mevzuat">Mevzuat</a>
           <a href="#blog">Blog</a>
           <a href="#iletisim">İletişim</a>
         </div>
