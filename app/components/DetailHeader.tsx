@@ -10,7 +10,7 @@ export function DetailHeader() {
       </a>
       <nav aria-label="Ana menü">
         <a href="/mevzuat">Mevzuat</a>
-        <a href="/#yol-haritasi">Yol haritası</a>
+        <a href="/fraud">Fraud</a>
         <a href="/#blog">Blog</a>
         <a href="/#iletisim">İletişim</a>
       </nav>
