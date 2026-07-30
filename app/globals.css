@@ -242,6 +242,11 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
 .legislation-intro b { display: block; font: 400 27px Georgia; }
 .legislation-intro span { display: block; color: var(--muted); font-size: 9px; letter-spacing: .08em; margin-top: 5px; }
 .legislation-intro > p { color: var(--muted); font-size: 11px; line-height: 1.55; border-left: 1px solid var(--line); padding-left: 32px; margin: 0; }
+.travel-rule-feature { max-width: 1236px; margin: 0 auto 100px; padding: 52px; background: #e7ebe3; display: grid; grid-template-columns: 1fr .72fr; gap: 9%; align-items: end; }
+.travel-rule-feature h2 { font: 400 clamp(42px, 4.6vw, 66px)/.98 Georgia, serif; letter-spacing: -.05em; margin: 0; }
+.travel-rule-feature > div:last-child > p { color: var(--muted); font-size: 13px; line-height: 1.7; margin: 0 0 28px; }
+.travel-rule-feature a { display: inline-flex; gap: 24px; border-bottom: 1px solid var(--ink); padding-bottom: 6px; font-size: 11px; font-weight: 850; }
+.travel-rule-feature a span { color: #66857b; }
 .regulation-block { max-width: 1320px; margin: 0 auto; padding: 40px 42px 120px; display: grid; grid-template-columns: .72fr 1.28fr; gap: 8%; align-items: start; }
 .regulation-block.second { border-top: 1px solid var(--line); padding-top: 110px; }
 .regulation-title { position: sticky; top: 35px; }
@@ -319,6 +324,14 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
 .article-sources a span { color: var(--lime); font-weight: 850; }
 .article-sources a i { font-style: normal; color: var(--lime); }
 .article-disclaimer { color: #7b8884 !important; font-size: 10px !important; line-height: 1.55 !important; }
+.travel-scenarios { border-top: 1px solid var(--line); margin-top: 35px; }
+.travel-scenarios article { display: grid; grid-template-columns: 54px 1fr; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.travel-scenarios article > span { width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; color: #66857b; font: italic 12px Georgia; }
+.travel-scenarios h3 { margin: 2px 0 9px; }
+.travel-scenarios p { font-size: 12px; line-height: 1.68; margin: 0; }
+.travel-process { grid-template-columns: repeat(5, 1fr); }
+.travel-process > div { min-height: 215px; padding: 16px; }
+.travel-process h3 { font-size: 18px; }
 
 /* Blog index */
 .blog-index-list { max-width: 1240px; margin: 0 auto; padding: 90px 42px 120px; }
@@ -423,6 +436,7 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .detail-hero { grid-template-columns: 1fr; padding: 75px 24px 65px; gap: 35px; }
   .legislation-intro { padding: 30px 24px 60px; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .legislation-intro > p { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
+  .travel-rule-feature { margin: 0 24px 80px; padding: 40px; grid-template-columns: 1fr; gap: 35px; }
   .regulation-block { grid-template-columns: 1fr; padding: 30px 24px 90px; gap: 55px; }
   .regulation-block.second { padding-top: 80px; }
   .regulation-title { position: static; }
@@ -431,6 +445,7 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .article-toc { position: static; display: grid; grid-template-columns: 1fr 1fr; }
   .article-toc > span { grid-column: 1 / -1; }
   .article-toc a { padding-right: 10px; }
+  .travel-process { grid-template-columns: repeat(3, 1fr); }
   .home-fraud { grid-template-columns: 1fr; padding: 80px 24px; gap: 55px; }
   .blog-index-post { grid-template-columns: 1fr 1fr; }
   .fraud-hero { grid-template-columns: 1fr; padding: 75px 24px; gap: 55px; }
@@ -467,6 +482,8 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .detail-hero h1, .article-hero h1 { font-size: 52px; }
   .legislation-intro { grid-template-columns: 1fr 1fr; }
   .legislation-intro > div:nth-child(3) { grid-column: 1 / -1; }
+  .travel-rule-feature { margin-left: 0; margin-right: 0; padding: 40px 24px; }
+  .travel-rule-feature h2 { font-size: 43px; }
   .regulation-title h2 { font-size: 43px; }
   .article-hero { padding: 50px 0 60px; }
   .back-link { margin-bottom: 40px; }
@@ -477,6 +494,7 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .article-content h2 { font-size: 32px; }
   .callout { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
+  .travel-process { grid-template-columns: 1fr 1fr; }
   .definition-grid { grid-template-columns: 1fr; }
   .article-table { display: block; overflow-x: auto; }
   .metric-list > div { grid-template-columns: 1fr; gap: 6px; }

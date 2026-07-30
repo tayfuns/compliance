@@ -12,6 +12,7 @@ export function DetailHeader() {
       </a>
       <nav aria-label="Ana menü">
         <a href="/mevzuat">Mevzuat</a>
+        <a href="/seyahat-kurali">Seyahat Kuralı</a>
         <a href="/fraud">Fraud</a>
         <a href="/blog">Blog</a>
         <a href="/#iletisim">İletişim</a>
@@ -33,6 +34,7 @@ export function DetailFooter() {
       <p>Türkiye kripto ekosistemi için bağımsız bilgilendirme platformu.</p>
       <div>
         <a href="/mevzuat">Mevzuat</a>
+        <a href="/seyahat-kurali">Seyahat Kuralı</a>
         <a href="/blog">Blog</a>
         <a href="/#iletisim">İletişim</a>
         <DisclaimerModal />

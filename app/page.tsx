@@ -60,6 +60,7 @@ export default function Home() {
         </a>
         <nav aria-label="Ana menü">
           <a href="/mevzuat">Mevzuat</a>
+          <a href="/seyahat-kurali">Seyahat Kuralı</a>
           <a href="/fraud">Fraud</a>
           <a href="/blog">Blog</a>
           <a href="#iletisim">İletişim</a>

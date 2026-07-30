@@ -114,6 +114,17 @@ export default function LegislationPage() {
         <p>Özetler genel bilgilendirme amaçlıdır. Uygulama kararlarında Tebliğlerin güncel tam metni ve Kurul kararları esas alınmalıdır.</p>
       </section>
 
+      <section className="travel-rule-feature">
+        <div>
+          <p className="eyebrow"><span /> MASAK UYGULAMA REHBERİ</p>
+          <h2>Transferle birlikte<br /><em>bilgi de seyahat eder.</em></h2>
+        </div>
+        <div>
+          <p>15.000 TL eşiği, zorunlu gönderici ve alıcı bilgileri, kişisel cüzdanlar, yurt dışı kuruluşlar ve eksik transfer mesajlarında uygulanacak adımları tek sayfada inceleyin.</p>
+          <a href="/seyahat-kurali">Seyahat Kuralı rehberini açın <span>→</span></a>
+        </div>
+      </section>
+
       <section className="regulation-block">
         <div className="regulation-title">
           <span className="regulation-code">III-35/B.1</span>
