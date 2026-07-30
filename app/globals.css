@@ -151,6 +151,13 @@ em { color: #49796b; font-style: italic; }
 .ask i:nth-child(3), .bid i:nth-child(2) { height: 80%; opacity: .75; }
 .ask i:nth-child(4), .bid i:nth-child(1) { height: 100%; }
 .bid i { background: #84b35e; }
+.grc { background: linear-gradient(145deg, #dce7df, #b8cec1); }
+.grc-model { width: 310px; height: 280px; position: relative; }
+.grc-node { position: absolute; width: 170px; height: 170px; border: 1px solid rgba(16,40,35,.42); border-radius: 50%; display: grid; place-items: center; color: var(--ink); font: italic 38px Georgia; }
+.grc-node.gov { left: 70px; top: 0; background: rgba(200,241,105,.52); }
+.grc-node.risk { left: 10px; bottom: 0; background: rgba(251,250,246,.52); }
+.grc-node.comp { right: 10px; bottom: 0; background: rgba(129,217,181,.48); }
+.grc-model > b { position: absolute; z-index: 2; left: 50%; top: 56%; transform: translate(-50%, -50%); width: 70px; height: 70px; border-radius: 50%; background: var(--ink); color: var(--lime); display: grid; place-items: center; font-size: 11px; letter-spacing: .15em; }
 .post-meta { display: flex; gap: 15px; align-items: center; font-size: 9px; font-weight: 800; letter-spacing: .15em; color: var(--muted); }
 .post-meta span { color: var(--ink); background: var(--lime); padding: 7px 10px; }
 .post-content h3 { font: 400 clamp(38px, 4vw, 58px)/1 Georgia, serif; letter-spacing: -.04em; margin: 22px 0; }

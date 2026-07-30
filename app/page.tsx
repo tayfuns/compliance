@@ -171,7 +171,7 @@ export default function Home() {
             <p className="eyebrow"><span /> UYGULAMA NOTLARI</p>
             <h2>Uyumu pratiğe<br /><em>çeviren yazılar.</em></h2>
           </div>
-          <p>Saklama operasyonlarından piyasa yapıcılığına, teknik kavramları karar vericiler ve uygulayıcılar için sadeleştiriyoruz.</p>
+          <p>Saklama operasyonlarından GRC’ye, teknik kavramları karar vericiler ve uygulayıcılar için sadeleştiriyoruz.</p>
         </div>
 
         <div className="home-blog-grid">
@@ -191,20 +191,21 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="feature-post home-post" id="piyasa-yapici">
-            <div className="post-visual market">
+          <article className="feature-post home-post" id="grc-nedir">
+            <div className="post-visual grc">
               <span className="post-index">02</span>
-              <div className="order-book" aria-hidden="true">
-                <div className="ask"><i /><i /><i /><i /></div>
-                <span>SPREAD</span>
-                <div className="bid"><i /><i /><i /><i /></div>
+              <div className="grc-model" aria-hidden="true">
+                <span className="grc-node gov">G</span>
+                <span className="grc-node risk">R</span>
+                <span className="grc-node comp">C</span>
+                <b>GRC</b>
               </div>
             </div>
             <div className="post-content">
-              <div className="post-meta"><span>PİYASA MİKROYAPISI</span><time>11 dk okuma</time></div>
-              <h3>Piyasa yapıcı nedir?</h3>
-              <p className="post-deck">İki yönlü kotasyon vererek işlem yapılabilirliği destekleyen; spread, envanter, teknoloji ve uyum risklerini yöneten profesyonel katılımcıdır.</p>
-              <a className="read-more" href="/blog/piyasa-yapici">Devamını oku <span>→</span></a>
+              <div className="post-meta"><span>YÖNETİŞİM &amp; UYUM</span><time>14 dk okuma</time></div>
+              <h3>GRC nedir?</h3>
+              <p className="post-deck">Yönetişim, risk yönetimi ve uyumluluğu ortak hedefler, kontroller ve kanıtlar etrafında buluşturan bütünleşik yönetim yaklaşımıdır.</p>
+              <a className="read-more" href="/blog/grc-nedir">Devamını oku <span>→</span></a>
             </div>
           </article>
         </div>

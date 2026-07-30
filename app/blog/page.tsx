@@ -3,7 +3,7 @@ import { DetailFooter, DetailHeader } from "../components/DetailHeader";
 
 export const metadata: Metadata = {
   title: "Blog | Kripto Uyum Pusulası",
-  description: "Kripto saklama, piyasa yapısı, uyum ve operasyon konularında kapsamlı uygulama yazıları.",
+  description: "Kripto saklama, GRC, yönetişim, risk yönetimi, uyum ve operasyon konularında kapsamlı uygulama yazıları.",
 };
 
 const posts = [
@@ -18,12 +18,12 @@ const posts = [
   },
   {
     no: "02",
-    category: "PİYASA MİKROYAPISI",
-    time: "11 dk okuma",
-    title: "Piyasa yapıcı nedir?",
-    description: "Kotasyon, spread, envanter riski, sözleşme, gözetim ve piyasa kalitesi metrikleriyle piyasa yapıcılık modelini keşfedin.",
-    href: "/blog/piyasa-yapici",
-    visual: "market",
+    category: "YÖNETİŞİM & UYUM",
+    time: "14 dk okuma",
+    title: "GRC nedir?",
+    description: "Yönetişim, risk yönetimi ve uyumluluğu ortak bir karar sisteminde buluşturan GRC modelini; roller, kontroller, teknoloji ve güncel standartlarla inceleyin.",
+    href: "/blog/grc-nedir",
+    visual: "grc",
   },
 ];
 
@@ -41,12 +41,13 @@ function PostVisual({ type, no }: { type: string; no: string }) {
   }
 
   return (
-    <div className="post-visual market">
+    <div className="post-visual grc">
       <span className="post-index">{no}</span>
-      <div className="order-book" aria-hidden="true">
-        <div className="ask"><i /><i /><i /><i /></div>
-        <span>SPREAD</span>
-        <div className="bid"><i /><i /><i /><i /></div>
+      <div className="grc-model" aria-hidden="true">
+        <span className="grc-node gov">G</span>
+        <span className="grc-node risk">R</span>
+        <span className="grc-node comp">C</span>
+        <b>GRC</b>
       </div>
     </div>
   );
@@ -61,7 +62,7 @@ export default function BlogPage() {
           <p className="eyebrow"><span /> UYGULAMA NOTLARI</p>
           <h1>Uyumu pratiğe<br /><em>çeviren yazılar.</em></h1>
         </div>
-        <p>Saklama operasyonlarından piyasa mikroyapısına, teknik ve düzenleyici kavramları karar vericiler ile uygulayıcılar için derinleştiriyoruz.</p>
+        <p>Saklama operasyonlarından GRC’ye, teknik ve düzenleyici kavramları karar vericiler ile uygulayıcılar için derinleştiriyoruz.</p>
       </section>
 
       <section className="blog-index-list">
