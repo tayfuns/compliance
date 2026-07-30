@@ -60,7 +60,7 @@ export default function Home() {
         <nav aria-label="Ana menü">
           <a href="/mevzuat">Mevzuat</a>
           <a href="/fraud">Fraud</a>
-          <a href="#blog">Blog</a>
+          <a href="/blog">Blog</a>
           <a href="#iletisim">İletişim</a>
         </nav>
         <a className="nav-cta" href={spkListUrl} target="_blank" rel="noreferrer">
@@ -78,7 +78,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/mevzuat">Mevzuatı incele <span>→</span></a>
-            <a className="text-link" href="#blog">Son yazıları oku <span>→</span></a>
+            <a className="text-link" href="/blog">Son yazıları oku <span>→</span></a>
           </div>
         </div>
         <div className="hero-orbit" aria-label="SPK, MASAK, KVKK ve bilgi sistemleri uyum alanları">
@@ -146,6 +146,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-fraud">
+        <div className="home-fraud-intro">
+          <p className="eyebrow light"><span /> FRAUD KURAL KÜTÜPHANESİ</p>
+          <h2>Şüpheli davranışı<br /><em>erken yakalayın.</em></h2>
+          <p>Kimlikten zincir üstü transfere, hesap ele geçirmeden piyasa suistimaline kadar kripto platformlarında kullanılan fraud kontrollerini tek bir kütüphanede topladık.</p>
+          <a href="/fraud">30 kuralın detaylarını incele <span>→</span></a>
+        </div>
+        <div className="home-fraud-groups">
+          <a href="/fraud#ID"><span>01</span><b>Kimlik & Hesap Açılışı</b><small>Çoklu kimlik, sentetik profil, cihaz ilişkisi</small></a>
+          <a href="/fraud#ATO"><span>02</span><b>Hesap Ele Geçirme</b><small>MFA, yeni cihaz, şifre ve API anomalileri</small></a>
+          <a href="/fraud#PAY"><span>03</span><b>Para Yatırma & Ödeme</b><small>Üçüncü kişi, parçalı fonlama, chargeback</small></a>
+          <a href="/fraud#CHAIN"><span>04</span><b>Transfer & Zincir Üstü</b><small>Yüksek riskli cüzdan, mixer ve bridge kullanımı</small></a>
+          <a href="/fraud#BEH"><span>05</span><b>Müşteri Davranışı & Scam</b><small>Mule, uzaktan erişim ve yatırım dolandırıcılığı</small></a>
+          <a href="/fraud#MKT"><span>06</span><b>Piyasa Suistimali</b><small>Wash trading, spoofing ve pump-and-dump</small></a>
+        </div>
+      </section>
+
       <section className="section blog-section" id="blog">
         <div className="section-heading blog-heading">
           <div>
@@ -155,61 +172,41 @@ export default function Home() {
           <p>Saklama operasyonlarından piyasa yapıcılığına, teknik kavramları karar vericiler ve uygulayıcılar için sadeleştiriyoruz.</p>
         </div>
 
-        <article className="feature-post" id="saklamada-ilklendirme">
-          <div className="post-visual ceremony">
-            <span className="post-index">01</span>
-            <div className="key-ceremony" aria-hidden="true">
-              <span className="key-core">KEY</span>
-              <i className="key-node n1">A</i><i className="key-node n2">B</i><i className="key-node n3">C</i>
+        <div className="home-blog-grid">
+          <article className="feature-post home-post" id="saklamada-ilklendirme">
+            <div className="post-visual ceremony">
+              <span className="post-index">01</span>
+              <div className="key-ceremony" aria-hidden="true">
+                <span className="key-core">KEY</span>
+                <i className="key-node n1">A</i><i className="key-node n2">B</i><i className="key-node n3">C</i>
+              </div>
             </div>
-          </div>
-          <div className="post-content">
-            <div className="post-meta"><span>SAKLAMA</span><time>8 dk okuma</time></div>
-            <h3>Saklamada ilklendirme nedir?</h3>
-            <p className="post-deck">Bir saklama sisteminin canlı kullanıma güvenli, kontrollü ve kanıtlanabilir biçimde hazırlanmasıdır. Cüzdan açmaktan çok daha fazlasını kapsar.</p>
-            <div className="post-body">
-              <p><b>İlklendirme</b>, kripto varlıkların saklanacağı altyapının ilk güven kökünün oluşturulduğu süreçtir. Anahtarların veya anahtar parçalarının üretilmesi; HSM, MPC ya da çoklu imza politikasının kurulması; yetkilerin dağıtılması ve bütün adımların değiştirilemez kanıtlarla kaydedilmesi bu sürecin merkezindedir.</p>
-              <h4>İyi bir ilklendirme töreni neleri kapsar?</h4>
-              <ul>
-                <li><b>Önceden onaylı senaryo:</b> Katılımcılar, roller, eşikler, cihazlar ve başarısızlık adımları yazılıdır.</li>
-                <li><b>Görevler ayrılığı:</b> Tek kişinin anahtara, yedeklere veya işlem onayına tek başına hâkim olması engellenir.</li>
-                <li><b>Temiz ortam ve doğrulama:</b> Donanım bütünlüğü, yazılım sürümleri, entropi kaynakları ve ağ izolasyonu kontrol edilir.</li>
-                <li><b>Yedekleme ve kurtarma:</b> Parçalar coğrafi ve kurumsal olarak ayrıştırılır; kontrollü bir kurtarma provası yapılır.</li>
-                <li><b>Test ve mutabakat:</b> Küçük tutarlı yatırma-çekme işlemleri, adres beyaz listeleme ve muhasebe kayıtları uçtan uca denenir.</li>
-              </ul>
-              <p>Çıktı yalnızca çalışan bir cüzdan değildir. Kim-ne zaman-ne yaptı sorularını yanıtlayan tören tutanağı, anahtar envanteri, yetki matrisi, yapılandırma özetleri ve test sonuçlarından oluşan bir <b>kanıt paketi</b> üretilmelidir. Böylece operasyon, denetim ve olay müdahalesi aynı güven temelinde buluşur.</p>
+            <div className="post-content">
+              <div className="post-meta"><span>SAKLAMA</span><time>12 dk okuma</time></div>
+              <h3>Saklamada ilklendirme nedir?</h3>
+              <p className="post-deck">Bir saklama sisteminin ilk güven kökünün oluşturulduğu; anahtarların, yetkilerin ve kontrol politikalarının canlı kullanıma hazırlandığı süreçtir.</p>
+              <a className="read-more" href="/blog/saklamada-ilklendirme">Devamını oku <span>→</span></a>
             </div>
-            <a className="read-more" href="/blog/saklamada-ilklendirme">Devamını oku <span>→</span></a>
-          </div>
-        </article>
+          </article>
 
-        <article className="feature-post reverse" id="piyasa-yapici">
-          <div className="post-visual market">
-            <span className="post-index">02</span>
-            <div className="order-book" aria-hidden="true">
-              <div className="ask"><i /><i /><i /><i /></div>
-              <span>SPREAD</span>
-              <div className="bid"><i /><i /><i /><i /></div>
+          <article className="feature-post home-post" id="piyasa-yapici">
+            <div className="post-visual market">
+              <span className="post-index">02</span>
+              <div className="order-book" aria-hidden="true">
+                <div className="ask"><i /><i /><i /><i /></div>
+                <span>SPREAD</span>
+                <div className="bid"><i /><i /><i /><i /></div>
+              </div>
             </div>
-          </div>
-          <div className="post-content">
-            <div className="post-meta"><span>PİYASA MİKROYAPISI</span><time>6 dk okuma</time></div>
-            <h3>Piyasa yapıcı nedir?</h3>
-            <p className="post-deck">Alış ve satış yönünde sürekli kotasyon vererek işlem yapılabilirliği destekleyen; bunu yaparken fiyat, envanter ve karşı taraf riski yöneten katılımcıdır.</p>
-            <div className="post-body">
-              <p>Piyasa yapıcı, belirli bir kripto varlıkta eşzamanlı alış ve satış emirleri bulundurarak likidite sağlar. Alış ile satış fiyatı arasındaki fark <b>spread</b> olarak adlandırılır. Rekabetçi ve derin bir emir defterinde spread genellikle daralır; yatırımcılar daha düşük fiyat etkisiyle işlem yapabilir.</p>
-              <h4>Nasıl çalışır?</h4>
-              <ul>
-                <li><b>Kotasyon:</b> Belirlenen azami spread, asgari miktar ve süre kriterlerine göre çift yönlü emir üretir.</li>
-                <li><b>Envanter yönetimi:</b> Fiyat hareketleriyle biriken varlık riskini limitler ve gerektiğinde başka piyasalarda dengeler.</li>
-                <li><b>Teknoloji:</b> Düşük gecikmeli bağlantı, kesinti korumaları ve otomatik risk limitleriyle emirleri günceller.</li>
-                <li><b>Gözetim:</b> Manipülatif işlem, yapay hacim, kendi kendine işlem ve çıkar çatışması riskleri izlenir.</li>
-              </ul>
-              <p>Piyasa yapıcılığı fiyatın yükselmesini garanti etmez; amaç düzenli bir alım-satım ortamını desteklemektir. Platform ile piyasa yapıcı arasındaki sözleşme, teşvikler, raporlama, olağanüstü piyasa koşulları ve fesih kuralları açık olmalıdır. Listeleme, gözetim ve çıkar çatışması kontrolleri organizasyon içinde birbirinden ayrıştırılmalıdır.</p>
+            <div className="post-content">
+              <div className="post-meta"><span>PİYASA MİKROYAPISI</span><time>11 dk okuma</time></div>
+              <h3>Piyasa yapıcı nedir?</h3>
+              <p className="post-deck">İki yönlü kotasyon vererek işlem yapılabilirliği destekleyen; spread, envanter, teknoloji ve uyum risklerini yöneten profesyonel katılımcıdır.</p>
+              <a className="read-more" href="/blog/piyasa-yapici">Devamını oku <span>→</span></a>
             </div>
-            <a className="read-more" href="/blog/piyasa-yapici">Devamını oku <span>→</span></a>
-          </div>
-        </article>
+          </article>
+        </div>
+        <a className="all-posts-link" href="/blog">Tüm blog yazılarını görüntüle <span>→</span></a>
       </section>
 
       <section className="sources">
@@ -245,7 +242,7 @@ export default function Home() {
         <p>Türkiye kripto ekosistemi için bağımsız bilgilendirme platformu.</p>
         <div>
           <a href="/mevzuat">Mevzuat</a>
-          <a href="#blog">Blog</a>
+          <a href="/blog">Blog</a>
           <a href="#iletisim">İletişim</a>
         </div>
         <small>© 2026 Kripto Uyum Pusulası</small>

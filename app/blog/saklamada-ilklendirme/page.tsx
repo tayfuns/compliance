@@ -15,7 +15,7 @@ export default function CustodyInitializationArticle() {
       <DetailHeader />
       <article className="article-page">
         <header className="article-hero">
-          <a className="back-link" href="/#blog">← Bloga dön</a>
+          <a className="back-link" href="/blog">← Bloga dön</a>
           <div className="article-meta"><span>SAKLAMA OPERASYONLARI</span><time>12 dk okuma</time></div>
           <h1>Saklamada<br /><em>ilklendirme</em> nedir?</h1>
           <p>Bir saklama altyapısının ilk güven kökünü oluşturmak; anahtarları, yetkileri, sistemleri ve kanıtları kontrollü biçimde canlı kullanıma hazırlamaktır.</p>

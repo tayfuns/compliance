@@ -11,7 +11,7 @@ export function DetailHeader() {
       <nav aria-label="Ana menü">
         <a href="/mevzuat">Mevzuat</a>
         <a href="/fraud">Fraud</a>
-        <a href="/#blog">Blog</a>
+        <a href="/blog">Blog</a>
         <a href="/#iletisim">İletişim</a>
       </nav>
       <a className="nav-cta" href={spkListUrl} target="_blank" rel="noreferrer">
@@ -31,7 +31,7 @@ export function DetailFooter() {
       <p>Türkiye kripto ekosistemi için bağımsız bilgilendirme platformu.</p>
       <div>
         <a href="/mevzuat">Mevzuat</a>
-        <a href="/#blog">Blog</a>
+        <a href="/blog">Blog</a>
         <a href="/#iletisim">İletişim</a>
       </div>
       <small>© 2026 Kripto Uyum Pusulası</small>

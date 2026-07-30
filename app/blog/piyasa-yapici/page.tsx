@@ -15,7 +15,7 @@ export default function MarketMakerArticle() {
       <DetailHeader />
       <article className="article-page market-article">
         <header className="article-hero">
-          <a className="back-link" href="/#blog">← Bloga dön</a>
+          <a className="back-link" href="/blog">← Bloga dön</a>
           <div className="article-meta"><span>PİYASA MİKROYAPISI</span><time>11 dk okuma</time></div>
           <h1>Piyasa yapıcı<br /><em>nedir?</em></h1>
           <p>Alış ve satış yönünde düzenli fiyat sağlayarak işlem yapılabilirliği destekleyen; bunu yaparken spread, envanter, teknoloji ve uyum risklerini yöneten profesyonel katılımcıdır.</p>

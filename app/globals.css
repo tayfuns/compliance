@@ -163,6 +163,26 @@ em { color: #49796b; font-style: italic; }
 .read-more { display: inline-flex; align-items: center; gap: 24px; margin-top: 15px; padding-bottom: 6px; border-bottom: 1px solid var(--ink); font-size: 12px; font-weight: 800; }
 .read-more span { color: #648378; transition: transform .2s ease; }
 .read-more:hover span { transform: translateX(4px); }
+.home-blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; border-top: 1px solid var(--line); padding-top: 42px; }
+.home-blog-grid .home-post { display: flex; flex-direction: column; gap: 0; padding: 0; border: 0; }
+.home-blog-grid .home-post .post-visual { min-height: 390px; }
+.home-blog-grid .home-post .post-content { padding: 30px 5px 0; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
+.home-blog-grid .home-post .post-content h3 { font-size: clamp(33px, 3.4vw, 49px); }
+.home-blog-grid .home-post .post-deck { min-height: 80px; margin-bottom: 18px; }
+.home-blog-grid .home-post .read-more { margin-top: auto; }
+.all-posts-link { display: flex; width: max-content; gap: 25px; margin: 55px auto 0; border-bottom: 1px solid var(--ink); padding-bottom: 6px; font-size: 12px; font-weight: 800; }
+
+.home-fraud { background: #1c3b34; color: white; padding: 105px max(5vw, calc((100vw - 1240px)/2)); display: grid; grid-template-columns: .72fr 1.28fr; gap: 9%; }
+.home-fraud-intro h2 { font: 400 clamp(46px, 5vw, 72px)/.98 Georgia, serif; letter-spacing: -.055em; margin: 0; }
+.home-fraud-intro h2 em { color: var(--mint); }
+.home-fraud-intro > p:not(.eyebrow) { color: rgba(255,255,255,.6); font-size: 13px; line-height: 1.7; margin: 28px 0; max-width: 430px; }
+.home-fraud-intro > a { color: var(--lime); display: inline-flex; gap: 23px; border-bottom: 1px solid var(--lime); padding-bottom: 5px; font-size: 11px; font-weight: 850; }
+.home-fraud-groups { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(255,255,255,.15); border-left: 1px solid rgba(255,255,255,.15); }
+.home-fraud-groups a { min-height: 145px; padding: 23px; border-right: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15); display: grid; grid-template-columns: 38px 1fr; align-items: start; transition: background .2s ease; }
+.home-fraud-groups a:hover { background: rgba(255,255,255,.055); }
+.home-fraud-groups span { color: var(--lime); font: italic 13px Georgia; }
+.home-fraud-groups b { font: 400 19px/1.2 Georgia; }
+.home-fraud-groups small { grid-column: 2; color: rgba(255,255,255,.48); font-size: 9px; line-height: 1.5; margin-top: 15px; }
 
 .sources { max-width: 1320px; margin: 0 auto 120px; padding: 54px 42px; background: #e8e6dd; display: grid; grid-template-columns: .75fr 1.25fr; gap: 8%; }
 .sources h2 { font: 400 40px Georgia; margin: 0; }
@@ -284,6 +304,22 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
 .article-sources a i { font-style: normal; color: var(--lime); }
 .article-disclaimer { color: #7b8884 !important; font-size: 10px !important; line-height: 1.55 !important; }
 
+/* Blog index */
+.blog-index-list { max-width: 1240px; margin: 0 auto; padding: 90px 42px 120px; }
+.blog-index-post { display: grid; grid-template-columns: .75fr 1.25fr; gap: 7%; padding: 55px 0; border-top: 1px solid var(--line); align-items: center; }
+.blog-index-post:last-child { border-bottom: 1px solid var(--line); }
+.blog-index-post .post-visual { min-height: 410px; }
+.blog-index-copy h2 { font: 400 clamp(40px, 4.5vw, 63px)/1 Georgia, serif; letter-spacing: -.045em; margin: 24px 0; }
+.blog-index-copy > p { color: var(--muted); font-size: 14px; line-height: 1.72; max-width: 590px; }
+.blog-index-copy > a { display: inline-flex; gap: 26px; border-bottom: 1px solid var(--ink); padding-bottom: 6px; margin-top: 20px; font-size: 11px; font-weight: 850; }
+.blog-index-copy > a span { color: #66857b; }
+.blog-index-cta { background: var(--ink); color: white; text-align: center; padding: 95px 24px; }
+.blog-index-cta .eyebrow { justify-content: center; }
+.blog-index-cta h2 { font: 400 clamp(45px, 5vw, 70px)/1 Georgia, serif; letter-spacing: -.05em; margin: 0; }
+.blog-index-cta h2 em { color: var(--mint); }
+.blog-index-cta > p:not(.eyebrow) { color: rgba(255,255,255,.58); font-size: 13px; margin: 24px 0; }
+.blog-index-cta > a { color: var(--lime); display: inline-flex; gap: 24px; border-bottom: 1px solid var(--lime); padding-bottom: 5px; font-size: 11px; font-weight: 850; }
+
 /* Fraud rule library */
 .fraud-hero { min-height: 610px; background: var(--ink); color: white; padding: 95px max(5vw, calc((100vw - 1240px)/2)); display: grid; grid-template-columns: 1.1fr .9fr; gap: 8%; align-items: center; }
 .fraud-hero h1, .fraud-operating h2, .fraud-contact h2 { font: 400 clamp(55px, 6vw, 90px)/.94 Georgia, serif; letter-spacing: -.06em; margin: 0; }
@@ -379,6 +415,8 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .article-toc { position: static; display: grid; grid-template-columns: 1fr 1fr; }
   .article-toc > span { grid-column: 1 / -1; }
   .article-toc a { padding-right: 10px; }
+  .home-fraud { grid-template-columns: 1fr; padding: 80px 24px; gap: 55px; }
+  .blog-index-post { grid-template-columns: 1fr 1fr; }
   .fraud-hero { grid-template-columns: 1fr; padding: 75px 24px; gap: 55px; }
   .fraud-radar { width: min(440px, 85vw); margin: 0 auto; }
   .fraud-principle { padding: 20px 24px; align-items: flex-start; }
@@ -428,6 +466,15 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .metric-list > div { grid-template-columns: 1fr; gap: 6px; }
   .article-sources { padding: 24px 18px; }
   .article-sources a { grid-template-columns: 80px 1fr 15px; }
+  .home-blog-grid { grid-template-columns: 1fr; gap: 70px; }
+  .home-blog-grid .home-post .post-visual { min-height: 360px; }
+  .home-blog-grid .home-post .post-deck { min-height: 0; }
+  .home-fraud-groups { grid-template-columns: 1fr; }
+  .home-fraud-groups a { min-height: 125px; }
+  .blog-index-list { padding: 65px 24px 90px; }
+  .blog-index-post { grid-template-columns: 1fr; gap: 35px; padding: 45px 0; }
+  .blog-index-post .post-visual { min-height: 360px; }
+  .blog-index-copy h2 { font-size: 40px; }
   .fraud-hero h1 { font-size: 51px; }
   .fraud-radar { width: 82vw; }
   .radar-core { font-size: 43px; }
