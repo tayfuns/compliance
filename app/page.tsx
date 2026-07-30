@@ -171,23 +171,25 @@ export default function Home() {
             <p className="eyebrow"><span /> UYGULAMA NOTLARI</p>
             <h2>Uyumu pratiğe<br /><em>çeviren yazılar.</em></h2>
           </div>
-          <p>Saklama operasyonlarından GRC’ye, teknik kavramları karar vericiler ve uygulayıcılar için sadeleştiriyoruz.</p>
+          <p>Müşteri ediniminden GRC’ye, teknik kavramları karar vericiler ve uygulayıcılar için sadeleştiriyoruz.</p>
         </div>
 
         <div className="home-blog-grid">
-          <article className="feature-post home-post" id="saklamada-ilklendirme">
-            <div className="post-visual ceremony">
+          <article className="feature-post home-post" id="musteri-edinimi">
+            <div className="post-visual onboarding">
               <span className="post-index">01</span>
-              <div className="key-ceremony" aria-hidden="true">
-                <span className="key-core">KEY</span>
-                <i className="key-node n1">A</i><i className="key-node n2">B</i><i className="key-node n3">C</i>
+              <div className="onboarding-model" aria-hidden="true">
+                <div className="profile-card"><i /><b>KYC</b><span>DOĞRULANDI</span></div>
+                <span className="onboarding-step s1">01</span>
+                <span className="onboarding-step s2">02</span>
+                <span className="onboarding-step s3">03</span>
               </div>
             </div>
             <div className="post-content">
-              <div className="post-meta"><span>SAKLAMA</span><time>12 dk okuma</time></div>
-              <h3>Saklamada ilklendirme nedir?</h3>
-              <p className="post-deck">Bir saklama sisteminin ilk güven kökünün oluşturulduğu; anahtarların, yetkilerin ve kontrol politikalarının canlı kullanıma hazırlandığı süreçtir.</p>
-              <a className="read-more" href="/blog/saklamada-ilklendirme">Devamını oku <span>→</span></a>
+              <div className="post-meta"><span>MÜŞTERİ EDİNİMİ &amp; KYC</span><time>15 dk okuma</time></div>
+              <h3>Kripto borsalarında müşteri edinimi</h3>
+              <p className="post-deck">Uzaktan, yüz yüze ve yabancı müşteri kabulünde kimlik tespiti, alınacak veriler ve risk kontrollerinin nasıl kurulacağını inceleyin.</p>
+              <a className="read-more" href="/blog/kripto-borsalarinda-musteri-edinimi">Devamını oku <span>→</span></a>
             </div>
           </article>
 

@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 const posts = [
   {
     no: "01",
-    category: "SAKLAMA OPERASYONLARI",
-    time: "12 dk okuma",
-    title: "Saklamada ilklendirme nedir?",
-    description: "Anahtar üretimi, HSM/MPC, görevler ayrılığı, test ve kanıt paketini kapsayan güvenli canlıya geçiş sürecini adım adım inceleyin.",
-    href: "/blog/saklamada-ilklendirme",
-    visual: "ceremony",
+    category: "MÜŞTERİ EDİNİMİ & KYC",
+    time: "15 dk okuma",
+    title: "Kripto borsalarında müşteri edinimi",
+    description: "Uzaktan, yüz yüze ve Türk uyruklu olmayan müşterilerin kabulünde kimlik tespiti, gerekli veriler, risk kontrolleri ve güncel 2026 kurallarını inceleyin.",
+    href: "/blog/kripto-borsalarinda-musteri-edinimi",
+    visual: "onboarding",
   },
   {
     no: "02",
@@ -28,13 +28,15 @@ const posts = [
 ];
 
 function PostVisual({ type, no }: { type: string; no: string }) {
-  if (type === "ceremony") {
+  if (type === "onboarding") {
     return (
-      <div className="post-visual ceremony">
+      <div className="post-visual onboarding">
         <span className="post-index">{no}</span>
-        <div className="key-ceremony" aria-hidden="true">
-          <span className="key-core">KEY</span>
-          <i className="key-node n1">A</i><i className="key-node n2">B</i><i className="key-node n3">C</i>
+        <div className="onboarding-model" aria-hidden="true">
+          <div className="profile-card"><i /><b>KYC</b><span>DOĞRULANDI</span></div>
+          <span className="onboarding-step s1">01</span>
+          <span className="onboarding-step s2">02</span>
+          <span className="onboarding-step s3">03</span>
         </div>
       </div>
     );
@@ -62,7 +64,7 @@ export default function BlogPage() {
           <p className="eyebrow"><span /> UYGULAMA NOTLARI</p>
           <h1>Uyumu pratiğe<br /><em>çeviren yazılar.</em></h1>
         </div>
-        <p>Saklama operasyonlarından GRC’ye, teknik ve düzenleyici kavramları karar vericiler ile uygulayıcılar için derinleştiriyoruz.</p>
+        <p>Müşteri ediniminden GRC’ye, teknik ve düzenleyici kavramları karar vericiler ile uygulayıcılar için derinleştiriyoruz.</p>
       </section>
 
       <section className="blog-index-list">
