@@ -1,3 +1,5 @@
+import { DisclaimerModal } from "./DisclaimerModal";
+
 const spkListUrl =
   "https://spk.gov.tr/kurumlar/kripto-varlik-hizmet-saglayicilar/faaliyette-bulunanlar-listesi";
 
@@ -33,6 +35,7 @@ export function DetailFooter() {
         <a href="/mevzuat">Mevzuat</a>
         <a href="/blog">Blog</a>
         <a href="/#iletisim">İletişim</a>
+        <DisclaimerModal />
       </div>
       <small>© 2026 Kripto Uyum Pusulası</small>
     </footer>

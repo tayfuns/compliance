@@ -1,4 +1,5 @@
 import { ContactForm } from "./ContactForm";
+import { DisclaimerModal } from "./components/DisclaimerModal";
 
 const spkListUrl =
   "https://spk.gov.tr/kurumlar/kripto-varlik-hizmet-saglayicilar/faaliyette-bulunanlar-listesi";
@@ -244,6 +245,7 @@ export default function Home() {
           <a href="/mevzuat">Mevzuat</a>
           <a href="/blog">Blog</a>
           <a href="#iletisim">İletişim</a>
+          <DisclaimerModal />
         </div>
         <small>© 2026 Kripto Uyum Pusulası</small>
       </footer>

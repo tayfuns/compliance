@@ -215,6 +215,22 @@ footer { max-width: 1320px; margin: 0 auto; padding: 45px 42px; display: grid; g
 footer p { color: var(--muted); font-size: 11px; }
 footer > div { display: flex; gap: 22px; font-size: 11px; font-weight: 700; }
 footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 20px; color: #7a8884; font-size: 9px; }
+.disclaimer-trigger { appearance: none; border: 0; background: transparent; color: inherit; padding: 0; cursor: pointer; font-size: inherit; font-weight: inherit; }
+.disclaimer-trigger:hover { opacity: .55; }
+.disclaimer-backdrop { position: fixed; inset: 0; z-index: 1000; background: rgba(6, 20, 17, .76); backdrop-filter: blur(8px); display: grid; place-items: center; padding: 24px; animation: modal-fade .18s ease-out; }
+.disclaimer-modal { width: min(720px, 100%); max-height: calc(100vh - 48px); overflow-y: auto; background: var(--paper); color: var(--ink); padding: 35px 42px 40px; box-shadow: 0 30px 100px rgba(0,0,0,.32); animation: modal-rise .22s ease-out; }
+.disclaimer-modal-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.disclaimer-modal-top > span { color: #66857b; font-size: 8px; font-weight: 900; letter-spacing: .17em; }
+.disclaimer-modal-top button { width: 35px; height: 35px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); font-size: 24px; line-height: 1; cursor: pointer; }
+.disclaimer-modal h2 { font: 400 clamp(42px, 5vw, 62px)/.95 Georgia, serif; letter-spacing: -.05em; margin: 35px 0; }
+.disclaimer-modal h2 em { color: #527b6f; }
+.disclaimer-copy { border-top: 1px solid var(--line); }
+.disclaimer-copy p { color: var(--muted); font-size: 13px; line-height: 1.75; padding: 18px 0; margin: 0; border-bottom: 1px solid var(--line); }
+.disclaimer-copy strong { color: var(--ink); }
+.disclaimer-close { width: 100%; margin-top: 28px; border: 0; background: var(--ink); color: white; padding: 15px 18px; display: flex; justify-content: space-between; cursor: pointer; font-size: 11px; font-weight: 800; }
+.disclaimer-close span { color: var(--lime); }
+@keyframes modal-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modal-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Detail pages */
 .detail-header { background: var(--paper); }
@@ -489,9 +505,14 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .fraud-steps > div:first-child { border-top: 1px solid var(--line); }
   .fraud-sources > div { flex-direction: column; }
   .fraud-contact h2 { font-size: 45px; }
+  footer > div { flex-wrap: wrap; justify-content: flex-end; }
+  .disclaimer-backdrop { padding: 12px; align-items: end; }
+  .disclaimer-modal { max-height: calc(100vh - 24px); padding: 25px 22px 28px; }
+  .disclaimer-modal h2 { font-size: 43px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+  .disclaimer-backdrop, .disclaimer-modal { animation: none; }
 }
