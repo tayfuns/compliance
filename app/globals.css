@@ -90,13 +90,13 @@ em { color: #49796b; font-style: italic; }
 .orbit-pill span { font-size: 9px; color: var(--muted); letter-spacing: .05em; }
 .pill-spk { top: 9%; right: 4%; }
 .pill-masak { top: 43%; left: -8%; }
-.pill-kvkk { bottom: 12%; right: 1%; }
-.pill-tech { bottom: 3%; left: 15%; }
+.pill-tubitak { bottom: 10%; right: 2%; }
 
-.notice { background: var(--lime); padding: 17px max(4vw, calc((100vw - 1320px)/2)); display: flex; align-items: center; gap: 14px; font-size: 12px; }
-.notice p { margin: 0; flex: 1; }
-.notice-icon { width: 21px; height: 21px; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; font: italic 700 13px Georgia; }
-.notice a { font-weight: 800; white-space: nowrap; border-bottom: 1px solid; padding-bottom: 2px; }
+.turkiye-crypto-preview { max-width: 1320px; margin: 0 auto; padding: 100px 42px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr .9fr; gap: 9%; align-items: start; }
+.turkiye-crypto-preview h2 { font: 400 clamp(45px, 5vw, 72px)/.98 Georgia, serif; letter-spacing: -.055em; margin: 0; }
+.turkiye-crypto-copy p { color: var(--muted); font-size: 15px; line-height: 1.75; margin: 0 0 19px; }
+.turkiye-crypto-copy a { display: inline-flex; align-items: center; gap: 28px; margin-top: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--ink); font-size: 11px; font-weight: 850; }
+.turkiye-crypto-copy a span { color: #66857b; }
 
 .section { max-width: 1320px; margin: 0 auto; padding: 120px 42px; }
 .section-heading { display: grid; grid-template-columns: 1fr .72fr; align-items: end; gap: 8%; margin-bottom: 64px; }
@@ -110,6 +110,11 @@ em { color: #49796b; font-style: italic; }
 .obligation-card p { color: var(--muted); font-size: 13px; line-height: 1.65; margin: 0 0 25px; }
 .tags { margin-top: auto; display: flex; gap: 6px; flex-wrap: wrap; }
 .tags span { border: 1px solid var(--line); border-radius: 99px; padding: 6px 9px; font-size: 9px; font-weight: 750; color: #526760; }
+.regulation-card { min-height: 275px; }
+.regulation-card h3 { max-width: 330px; font-size: 22px; }
+.regulation-card-links { margin-top: auto; display: flex; align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+.regulation-card-links a { display: inline-flex; gap: 8px; padding-bottom: 4px; border-bottom: 1px solid var(--ink); font-size: 10px; font-weight: 800; }
+.regulation-card-links a span { color: #66857b; }
 .legal-note { font-size: 11px; color: #7a8884; line-height: 1.55; margin: 22px 0 0; max-width: 820px; }
 
 .roadmap { background: var(--ink); color: white; padding: 110px max(5vw, calc((100vw - 1240px)/2)); display: grid; grid-template-columns: .75fr 1fr; gap: 10%; }
@@ -281,6 +286,30 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
 .regulation-topic small { color: #648378; font-size: 9px; font-weight: 800; letter-spacing: .13em; }
 .regulation-topic h3 { font: 400 25px Georgia; margin: 8px 0 12px; }
 .regulation-topic p { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 0; }
+
+/* Türkiye'de Kripto */
+.turkiye-crypto-story { max-width: 1120px; margin: 0 auto; padding: 105px 42px 95px; display: grid; grid-template-columns: 180px 1fr; gap: 7%; }
+.story-index { display: flex; flex-direction: column; align-items: center; gap: 15px; padding-top: 10px; color: #66857b; font: italic 15px Georgia, serif; }
+.story-index i { width: 1px; height: 220px; background: linear-gradient(var(--ink), var(--lime)); position: relative; }
+.story-index i::before, .story-index i::after { content: ""; position: absolute; left: -4px; width: 9px; height: 9px; border-radius: 50%; background: var(--ink); }
+.story-index i::before { top: 0; }
+.story-index i::after { bottom: 0; background: var(--lime); border: 1px solid var(--ink); }
+.story-copy { max-width: 760px; }
+.story-copy > p { color: var(--muted); font-size: 14px; line-height: 1.85; margin: 0 0 22px; }
+.crypto-regulation-directory { max-width: 1320px; margin: 0 auto; padding: 110px 42px 120px; border-top: 1px solid var(--line); }
+.directory-heading { display: grid; grid-template-columns: 1fr .72fr; gap: 8%; align-items: end; margin-bottom: 65px; }
+.directory-heading h2 { font: 400 clamp(45px, 5vw, 72px)/.98 Georgia, serif; letter-spacing: -.055em; margin: 0; }
+.directory-heading > p { color: var(--muted); font-size: 14px; line-height: 1.75; margin: 0 0 5px; }
+.regulation-directory-list { border-top: 1px solid var(--line); }
+.directory-row { display: grid; grid-template-columns: 44px 100px 110px minmax(0, 1fr) 74px; gap: 22px; align-items: center; padding: 23px 0; border-bottom: 1px solid var(--line); transition: background .2s ease, padding .2s ease; }
+.directory-row:hover { background: #fff; padding-left: 12px; padding-right: 12px; }
+.directory-no { color: #6c8b82; font: italic 14px Georgia, serif; }
+.directory-regulator, .directory-date { display: flex; flex-direction: column; gap: 6px; }
+.directory-row small { color: #789088; font-size: 8px; font-weight: 850; letter-spacing: .14em; }
+.directory-regulator b, .directory-date time { font-size: 11px; font-weight: 800; }
+.directory-row h3 { font: 400 18px/1.35 Georgia, serif; margin: 0; }
+.directory-row > a { justify-self: end; display: inline-flex; gap: 8px; padding-bottom: 4px; border-bottom: 1px solid var(--ink); font-size: 10px; font-weight: 850; }
+.directory-row > a span { color: #66857b; }
 .detail-cta { background: var(--ink); color: white; text-align: center; padding: 100px 24px; }
 .detail-cta .eyebrow { justify-content: center; }
 .detail-cta h2 { font: 400 clamp(44px, 5vw, 70px)/1 Georgia, serif; letter-spacing: -.05em; margin: 0; }
@@ -440,8 +469,7 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .nav-cta::before { content: "SPK listesi"; font-size: 11px; }
   .hero { grid-template-columns: 1fr; padding: 68px 24px; gap: 65px; }
   .hero-orbit { width: min(500px, 86vw); margin: 0 auto; }
-  .notice { padding: 16px 22px; align-items: flex-start; }
-  .notice a { display: none; }
+  .turkiye-crypto-preview { padding: 80px 24px; grid-template-columns: 1fr; gap: 38px; }
   .section, .sources { padding-left: 24px; padding-right: 24px; }
   .section-heading, .roadmap, .contact, .sources { grid-template-columns: 1fr; }
   .section-heading { gap: 30px; }
@@ -459,6 +487,10 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .regulation-block { grid-template-columns: 1fr; padding: 30px 24px 90px; gap: 55px; }
   .regulation-block.second { padding-top: 80px; }
   .regulation-title { position: static; }
+  .turkiye-crypto-story { padding: 80px 24px; grid-template-columns: 120px 1fr; }
+  .crypto-regulation-directory { padding: 80px 24px 100px; }
+  .directory-heading { grid-template-columns: 1fr; gap: 30px; }
+  .directory-row { grid-template-columns: 34px 78px 90px minmax(0, 1fr) 64px; gap: 14px; }
   .article-page { padding: 0 24px 90px; }
   .article-layout { grid-template-columns: 1fr; gap: 45px; }
   .article-toc { position: static; display: grid; grid-template-columns: 1fr 1fr; }
@@ -489,6 +521,9 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; }
   .hero-orbit { margin-top: -20px; }
   .orbit-pill { min-width: 105px; padding: 9px 11px; }
+  .pill-tubitak { right: -1%; }
+  .turkiye-crypto-preview { padding-top: 70px; padding-bottom: 70px; }
+  .turkiye-crypto-preview h2 { font-size: 46px; }
   .section { padding-top: 85px; padding-bottom: 85px; }
   .section-heading h2, .roadmap h2, .contact h2 { font-size: 46px; }
   .obligation-grid { grid-template-columns: 1fr; }
@@ -504,6 +539,19 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding
   .travel-rule-feature { margin-left: 0; margin-right: 0; padding: 40px 24px; }
   .travel-rule-feature h2 { font-size: 43px; }
   .regulation-title h2 { font-size: 43px; }
+  .turkiye-crypto-story { grid-template-columns: 1fr; gap: 38px; padding-top: 65px; padding-bottom: 65px; }
+  .story-index { flex-direction: row; justify-content: flex-start; }
+  .story-index i { width: 100px; height: 1px; }
+  .story-index i::before, .story-index i::after { top: -4px; }
+  .story-index i::after { left: auto; right: -4px; bottom: auto; }
+  .crypto-regulation-directory { padding-top: 70px; padding-bottom: 85px; }
+  .directory-heading h2 { font-size: 46px; }
+  .directory-row { grid-template-columns: 38px 1fr auto; gap: 12px 14px; align-items: start; padding: 22px 0; }
+  .directory-no { grid-row: 1 / 4; padding-top: 3px; }
+  .directory-regulator { grid-column: 2; }
+  .directory-date { grid-column: 3; text-align: right; }
+  .directory-row h3 { grid-column: 2 / 4; font-size: 17px; }
+  .directory-row > a { grid-column: 2 / 4; justify-self: start; margin-top: 4px; }
   .article-hero { padding: 50px 0 60px; }
   .back-link { margin-bottom: 40px; }
   .article-hero > p { font-size: 17px; }

@@ -4,42 +4,90 @@ import { DisclaimerModal } from "./components/DisclaimerModal";
 const spkListUrl =
   "https://spk.gov.tr/kurumlar/kripto-varlik-hizmet-saglayicilar/faaliyette-bulunanlar-listesi";
 
-const obligations = [
+const sectorRegulations = [
   {
     no: "01",
-    title: "Yetkilendirme ve kurumsal yapı",
-    text: "Kuruluş, faaliyet izni, ortaklık yapısı, pay devirleri, yönetici yeterliliği ve organizasyon SPK’nın III-35/B.1 çerçevesinde ele alınır.",
-    tags: ["SPK izni", "Yönetişim", "Asgari sermaye"],
+    title: "Ödemelerde Kripto Varlıkların Kullanılmamasına Dair Yönetmelik",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=38569&MevzuatTur=7&MevzuatTertip=5",
   },
   {
     no: "02",
-    title: "Faaliyet, saklama ve sermaye yeterliliği",
-    text: "Sunulabilecek hizmetler; listeleme, alım-satım, transfer ve saklama akışları ile likidite ve sermaye yeterliliği III-35/B.2 kapsamında yönetilir.",
-    tags: ["Müşteri varlığı", "Saklama", "Listeleme"],
+    title: "6362 Sayılı Sermaye Piyasası Kanunu",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6362&MevzuatTur=1&MevzuatTertip=5",
   },
   {
     no: "03",
-    title: "MASAK ve finansal suçlarla mücadele",
-    text: "Müşterini tanı, gerçek faydalanıcı, uzaktan kimlik tespiti, seyahat kuralı, şüpheli işlem bildirimi ve risk temelli sıkılaştırılmış tedbirler birlikte işletilir.",
-    tags: ["KYC / KYB", "ŞİB", "Travel Rule"],
+    title: "Kripto Varlık Hizmet Sağlayıcıların Kuruluş ve Faaliyet Esasları Hakkında Tebliğ (III-35/B.1)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=42329&MevzuatTur=9&MevzuatTertip=5",
+    gazetteUrl: "https://www.resmigazete.gov.tr/eskiler/2025/03/20250313-5.htm",
   },
   {
     no: "04",
-    title: "Bilgi sistemleri ve operasyonel dayanıklılık",
-    text: "Erişim kontrolleri, görevler ayrılığı, anahtar yönetimi, olay müdahalesi, iş sürekliliği ve düzenli bağımsız denetim kanıtlanabilir olmalıdır.",
-    tags: ["Siber güvenlik", "İş sürekliliği", "Denetim izi"],
+    title: "Kripto Varlık Hizmet Sağlayıcıların Çalışma Usul ve Esasları ile Sermaye Yeterliliği Hakkında Tebliğ (III-35/B.2)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=42327&MevzuatTur=9&MevzuatTertip=5",
+    gazetteUrl: "https://www.resmigazete.gov.tr/eskiler/2025/03/20250313-6.htm",
   },
   {
     no: "05",
-    title: "Müşteri koruması ve kayıt düzeni",
-    text: "Müşteri varlıklarının ayrıştırılması, mutabakat, ücret ve risk açıklamaları, emir kayıtları, şikâyet yönetimi ve rezerv kanıtı süreçleri uçtan uca tasarlanır.",
-    tags: ["Ayrıştırma", "Mutabakat", "Rezerv kanıtı"],
+    title: "Aracı Kurumlar, Portföy Yönetim Şirketleri ve Kripto Varlık Hizmet Sağlayıcılar Tarafından Kullanılacak Uzaktan Kimlik Tespiti Yöntemlerine ve Elektronik Sözleşme İlişkisinin Kurulmasına İlişkin Tebliğ (III-42.1)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=39408&MevzuatTur=9&MevzuatTertip=5",
   },
   {
     no: "06",
-    title: "Veri, gizlilik ve pazarlama",
-    text: "KVKK yükümlülükleri, saklama süreleri, açık rıza gerektiren alanlar ve yanıltıcı olmayan tanıtım dili; ürün ve büyüme akışlarının parçasıdır.",
-    tags: ["KVKK", "Aydınlatma", "Şeffaf iletişim"],
+    title: "Bilgi Sistemleri Bağımsız Denetim Tebliği (III-62.2)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=24295&MevzuatTur=9&MevzuatTertip=5",
+    gazetteUrl: "https://www.resmigazete.gov.tr/eskiler/2025/03/20250313-7.htm",
+  },
+  {
+    no: "07",
+    title: "Bilgi Sistemleri Yönetimine İlişkin Usul ve Esaslar Tebliği (VII-128.10)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=42464&MevzuatTur=9&MevzuatTertip=5",
+    gazetteUrl: "https://www.resmigazete.gov.tr/eskiler/2025/03/20250313-8.htm",
+  },
+  {
+    no: "08",
+    title: "Kripto Varlık Hizmet Sağlayıcıların Bilgi Sistemleri ve Teknolojik Altyapılarına İlişkin Kriterler",
+    relatedUrl: "https://bilgem.tubitak.gov.tr/wp-content/uploads/sites/8/TUBITAK-KVHS-Bilgi-Sistemleri-ve-Teknolojik-Altyapi-Kriterleri_25.10.25_r1.1.pdf",
+  },
+  {
+    no: "09",
+    title: "Kripto Varlık Merkezi Kayıt Sistemi İş ve İşlem Kuralları Yönergesi",
+    relatedUrl: "https://www.mkk.com.tr/sites/default/files/2025-07/KVMKS_Is_ve_Islem_Kurallari_Yonergesi_1.pdf",
+  },
+  {
+    no: "10",
+    title: "Suç Gelirlerinin Aklanmasının ve Terörün Finansmanının Önlenmesine Dair Tedbirler Hakkında Yönetmelik",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=200713012&MevzuatTur=21&MevzuatTertip=5",
+  },
+  {
+    no: "11",
+    title: "Suç Gelirlerinin Aklanmasının ve Terörün Finansmanının Önlenmesine İlişkin Yükümlülüklere Uyum Programı Hakkında Yönetmelik",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=12426&MevzuatTur=7&MevzuatTertip=5",
+  },
+  {
+    no: "12",
+    title: "Mali Suçları Araştırma Kurulu Başkanlığı Elektronik Tebligat Sistemine İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20631&MevzuatTur=7&MevzuatTertip=5",
+  },
+  {
+    no: "13",
+    title: "Mali Suçları Araştırma Kurulu Genel Tebliği (Sıra No: 29)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=42465&MevzuatTur=9&MevzuatTertip=5",
+  },
+  {
+    no: "14",
+    title: "Mali Suçları Araştırma Kurulu Genel Tebliği (Sıra No: 19)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=38566&MevzuatTur=9&MevzuatTertip=5",
+  },
+  {
+    no: "15",
+    title: "Mali Suçları Araştırma Kurulu Genel Tebliği (Sıra No: 21)",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=39833&MevzuatTur=9&MevzuatTertip=5",
+  },
+  {
+    no: "16",
+    title: "Ceza Muhakemesi Kanunu",
+    relatedUrl: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5",
   },
 ];
 
@@ -76,14 +124,14 @@ export default function Home() {
           <h1>Kripto işinizi<br />mevzuatla <em>uyumlu</em><br />büyütün.</h1>
           <p className="hero-lead">
             Türkiye’de faaliyet gösteren kripto varlık platformları ve saklama kuruluşları için
-            güncel düzenlemeleri, operasyonel yükümlülükleri ve uygulama notlarını tek yerde izleyin.
+            güncel düzenlemeleri, yükümlülükleri ve uygulama notlarını tek yerde izleyin.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/mevzuat">Mevzuatı incele <span>→</span></a>
             <a className="text-link" href="/blog">Son yazıları oku <span>→</span></a>
           </div>
         </div>
-        <div className="hero-orbit" aria-label="SPK, MASAK, KVKK ve bilgi sistemleri uyum alanları">
+        <div className="hero-orbit" aria-label="SPK, MASAK ve TÜBİTAK uyum alanları">
           <div className="orbit-ring ring-one" />
           <div className="orbit-ring ring-two" />
           <div className="orbit-center">
@@ -93,33 +141,40 @@ export default function Home() {
           </div>
           <div className="orbit-pill pill-spk"><b>SPK</b><span>Yetkilendirme</span></div>
           <div className="orbit-pill pill-masak"><b>MASAK</b><span>AML / CFT</span></div>
-          <div className="orbit-pill pill-kvkk"><b>KVKK</b><span>Veri güvenliği</span></div>
-          <div className="orbit-pill pill-tech"><b>BT</b><span>Dayanıklılık</span></div>
+          <div className="orbit-pill pill-tubitak"><b>TÜBİTAK</b><span>Teknoloji kriterleri</span></div>
         </div>
       </section>
 
-      <section className="notice">
-        <span className="notice-icon">i</span>
-        <p><b>Önemli not:</b> SPK “Faaliyette Bulunanlar Listesi” geçici niteliktedir. Listede yer almak, kuruluşun yetkilendirildiği anlamına gelmez.</p>
-        <a href={spkListUrl} target="_blank" rel="noreferrer">Güncel listeyi görüntüle <span>↗</span></a>
+      <section className="turkiye-crypto-preview">
+        <div>
+          <p className="eyebrow"><span /> TÜRKİYE’DE KRİPTO</p>
+          <h2>Düzenlemelerle olgunlaşan<br /><em>bir ekosistem.</em></h2>
+        </div>
+        <div className="turkiye-crypto-copy">
+          <p>Türkiye’de kripto varlık ekosistemi, hızlı büyüme döneminin ardından adım adım denetime tabi, daha kurumsal ve disiplinli bir yapıya dönüştü.</p>
+          <p>Kripto varlıklara ilişkin ilk temel düzenlemelerden biri, Türkiye Cumhuriyet Merkez Bankası tarafından 16 Nisan 2021’de yayımlandı. Bu düzenlemeyle kripto varlıkların ödemelerde doğrudan veya dolaylı biçimde kullanılması ve bu kullanıma yönelik hizmet sunulması yasaklandı.</p>
+          <a href="/turkiyede-kripto">Devamını oku <span>→</span></a>
+        </div>
       </section>
 
       <section className="section" id="mevzuat">
         <div className="section-heading">
           <div>
             <p className="eyebrow"><span /> UYUM ÇERÇEVESİ</p>
-            <h2>Temel yükümlülükler,<br /><em>net bir çerçevede.</em></h2>
+            <h2>Temel yükümlülükler.</h2>
           </div>
           <p>Uyum, tek bir kontrol listesi değildir. Lisanslamadan müşteri varlıklarının korunmasına, finansal suçlarla mücadeleden bilgi sistemlerine uzanan bütünsel bir işletim modelidir.</p>
         </div>
         <div className="obligation-grid">
-          {obligations.map((item) => (
-            <article className="obligation-card" key={item.no}>
+          {sectorRegulations.map((item) => (
+            <article className="obligation-card regulation-card" key={item.no}>
               <span className="card-no">{item.no}</span>
               <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <div className="tags">
-                {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
+              <div className="regulation-card-links">
+                <a href={item.relatedUrl} target="_blank" rel="noreferrer">İlgili link <span>↗</span></a>
+                {item.gazetteUrl && (
+                  <a href={item.gazetteUrl} target="_blank" rel="noreferrer">Resmî Gazete Linki <span>↗</span></a>
+                )}
               </div>
             </article>
           ))}
